@@ -1,0 +1,31 @@
+<idea-plugin version="2">
+    <id>io.github.s0cks</id>
+    <name>Minecraft Forge Template Plugin</name>
+    <version>0.0.0.0</version>
+    <vendor email="asyncronous16@gmail.com" url="">Asyncronous</vendor>
+
+    <description>
+        Minecraft Forge Template Plugin
+    </description>
+
+    <change-notes/>
+
+    <idea-version since-build="131"/>
+
+    <actions>
+        <group id="MCFActionGroup" class="io.github.s0cks.mcfip.actions.MCFActionGroup" text="Minecraft Forge">
+            <action id="NewModClass" class="io.github.s0cks.mcfip.actions.NewModClassAction"/>
+            <action id="NewGuiHandler" class="io.github.s0cks.mcfip.actions.NewGuiHandlerAction"/>
+            <action id="NewBlock" class="io.github.s0cks.mcfip.actions.NewBlockAction"/>
+            <action id="NewItem" class="io.github.s0cks.mcfip.actions.NewItemAction"/>
+            <add-to-group group-id="NewGroup" anchor="last"/>
+        </group>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <inspectionToolProvider implementation="io.github.s0cks.mcfip.ForgeInspections"/>
+    </extensions>
+
+    <application-components/>
+    <project-components/>
+</idea-plugin>
